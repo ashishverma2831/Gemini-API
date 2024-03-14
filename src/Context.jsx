@@ -1,8 +1,15 @@
 import { createContext } from "react";
+import { runChat } from './gemini.js';
 
 export const Context = createContext();
 
 const ContextProvider = (props) => {
+
+    const onSent = async (prompt) => { 
+        await runChat(prompt);
+    }
+
+    onSent('what is react js?');
 
     const contextValue = {
 
