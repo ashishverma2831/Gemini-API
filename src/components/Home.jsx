@@ -7,7 +7,14 @@ const Home = () => {
 
   return (
     <>
-        <h1 className='bg-red-900'>Home</h1>
+        <div className='bg-red-200'>
+            <input type="text" placeholder='Enter a prompt here...' value={input} onChange={(e) => setInput(e.target.value)} />
+            <button onClick={() => onSent(input)}>Send</button>
+        </div>
+        <div>
+            { response && showResult && !loading ? <p>{response}</p> : null }
+            { loading ? <p>Loading...</p> : null }
+        </div>
     </>
   )
 }

@@ -13,7 +13,15 @@ const ContextProvider = (props) => {
     const [showResult, setShowResult] = useState(false);
 
     const onSent = async (prompt) => { 
-        await runChat(prompt);
+        setLoading(true);
+        setResponse('');
+        setShowResult(true);
+        setRecentPrompt(input);
+        const res = await runChat(input);
+        setResponse(res);
+        setLoading(false);
+        setInput('');
+
     }
 
     // onSent('what is react js?');
