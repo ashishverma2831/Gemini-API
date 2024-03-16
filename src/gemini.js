@@ -1,13 +1,9 @@
-// AIzaSyCgsMI6ANN0bf6nhgKibsxWHCfiYnl-LKg
-
 // node --version # Should be >= 18
 // npm install @google/generative-ai
 
 // require("dotenv").config();
 import dotenv from 'dotenv';
 dotenv.config();
-
-console.log(process.env);
 
 import {
     GoogleGenerativeAI,
@@ -16,7 +12,7 @@ import {
 } from "@google/generative-ai";
 
 const MODEL_NAME = "gemini-1.0-pro";
-const API_KEY = "AIzaSyCgsMI6ANN0bf6nhgKibsxWHCfiYnl-LKg";
+const API_KEY = process.env.GEMINI_API;
 
 async function runChat(prompt) {
     const genAI = new GoogleGenerativeAI(API_KEY);
