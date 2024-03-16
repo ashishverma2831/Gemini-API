@@ -3,6 +3,11 @@
 // node --version # Should be >= 18
 // npm install @google/generative-ai
 
+import 'dotenv/config'
+require("dotenv").config();
+
+console.log(process.env.GEMINI_API);
+
 import {
     GoogleGenerativeAI,
     HarmCategory,
