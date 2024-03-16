@@ -3,7 +3,7 @@
 
 import dotenv from 'dotenv';
 dotenv.config();
-console.log(process.env.GEMINI_API);
+console.log(process.env.VITE_APP_GEMINI_API);
 import {
     GoogleGenerativeAI,
     HarmCategory,
