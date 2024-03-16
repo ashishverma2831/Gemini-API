@@ -3,10 +3,11 @@
 // node --version # Should be >= 18
 // npm install @google/generative-ai
 
-import 'dotenv/config'
-require("dotenv").config();
+// require("dotenv").config();
+import dotenv from 'dotenv';
+dotenv.config();
 
-console.log(process.env.GEMINI_API);
+console.log(process.env);
 
 import {
     GoogleGenerativeAI,
